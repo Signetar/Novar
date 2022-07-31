@@ -26,7 +26,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Novar.
 pip install novar
 ```
 ## Simple Usage
-I've combined (nearly) all functionalities of Novar to one function for accessibility.
+I've combined (nearly) all functionalities of Novar into one function for accessibility.
 ```python
 novar(typed, target, groups=corresponding, softsounds=softsounds, ignored=ignored, delete_ignored=True) -> dict
 ```
@@ -57,7 +57,7 @@ Which would return:
     }
 }
 ```
-As *4stat111ne33e* is simply a variation (with a lot of special characters and spams) of *astatine*, `text_variation` is 1.0, meaning they are the same. However, as it contained special characters, `pronunciation_similarity`, a function only designed for strings that only consist of alphabets, would return an error.
+As *4stat111ne33e* is simply a variation (with a lot of special characters and spams) of *astatine*, `text_variation` is 1.0, meaning they are the same. However, as it contained special characters, `pronunciation_similarity`, a function designed for strings that only consist of alphabetic characters, would return an error.
 
 For another use case:
 ```python
@@ -145,7 +145,7 @@ print(novar.pronunciation_similarity("elephant", "jellyfish"))
 {'Similarity': 0.0, 'Confidence': 0.8}
 ```
 ### Disclaimer
-This function is not compatible with numeric or special characters, only alphabetic. Hence, when a string with numbers of special characters is inputted, it would simply return an error.
+This function is not compatible with numeric or special characters, only alphabetic. Hence, when a string with numbers or special characters is inputted, it would simply return an error.
 ```python
 print(novar.pronunciation_similarity("impossible", "3mpossible"))
 ```
@@ -160,10 +160,10 @@ print(novar.pronunciation_similarity("impossible", "empossible"))
 {'Similarity': 1.0, 'Confidence': 1.0}
 ```
 ## Customizations
-Novar heavily relies on arrays of characters and nuances, and most of them were configured for general use and hence lacks accuracy in some aspects. By tweaking them to fit your needs, the functions would perform much better.
+Novar heavily relies on arrays of characters and nuances, and most of them were configured for general use and hence lack accuracy in some aspects. By tweaking them to fit your needs, the functions would perform much better.
 
 ### Tweaking groups for text similarity
-Two functions that process texts with variations, `average_stuck_keyboard_enjoyer` and `text_variation`, uses **corresponding** and **corresponding2** respectavely. 
+Two functions that process text with variations, `average_stuck_keyboard_enjoyer` and `text_variation`, use **corresponding** and **corresponding2** respectively. 
 ```python
 corresponding = [
     ('1', 'i', 'l', '!'),
