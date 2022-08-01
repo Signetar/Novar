@@ -1,6 +1,7 @@
 # Novar (v1.0)
 
 A short name for NoVariations, made to be able to detect any v4r1ati0ns in text.
+[![Downloads](https://pepy.tech/badge/novar)](https://pepy.tech/project/novar)
 
 ## Table of Contents
 1. [Introduction](#Introduction)
